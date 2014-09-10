@@ -1,0 +1,54 @@
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty{
+    border-color:#FA787E;
+}
+.ng-valid.ng-dirty{
+    border-color:#78FA89;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+.name-header {
+  padding-top: 50px;
+}
+
+.logo {
+  font-family: "Lobster";
+}
+
+#bfbg {
+  width: 100% !important ;
+  background-image: url('../img/brand/logo.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 700px;
+  color: #ffffff;
+  padding-top: 10px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.test {
+  margin-top: 700px;
+}
+h2 {
+  font-variant: small-caps;
+  color:#cc5500;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+.threepoints {
+  padding-bottom: 200px;
+}

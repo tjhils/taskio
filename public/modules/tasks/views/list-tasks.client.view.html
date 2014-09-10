@@ -1,0 +1,35 @@
+<section data-ng-controller="TasksController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Tasks</h1>
+    </div>
+    <div class="list-group">
+        
+        <div data-ng-repeat="task in tasks" class="list-group-item">
+            <a data-ng-href="#!/tasks/{{task._id}}">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="task.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="task.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="task.name"></h4>
+        </a>
+            <div class="pull-right"  data-ng-show="authentication.user._id == task.user._id">
+                        <a style="margin-top: -50px;" class="btn btn-primary" href="/#!/tasks/{{task._id}}/edit">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </a>
+                        <a style="margin-top: -50px;" class="btn btn-primary" data-ng-click="remove();">
+                            <i class="glyphicon glyphicon-check"></i>
+                        </a>
+                        </div>
+        </div>
+                        
+    
+    </div>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!tasks.$resolved || tasks.length">
+    	No Tasks yet, why don't you <a href="/#!/tasks/create">create one</a>?
+    </div>
+</section>
+
+
